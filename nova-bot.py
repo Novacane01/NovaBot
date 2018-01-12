@@ -7,7 +7,7 @@ import psycopg2
 
 parse.uses_netloc.append("postgres")
 url = parse.urlparse(
-    "postgres://pkqqrhksxqhexa:4be7a6fb4d46a30a04867aed7093ab678230db93ef9b7f885d6068c701316b7c@ec2-107-21-201-57.compute-1.amazonaws.com:5432/d6evup307rbj4q")
+    "DATABASE_URL")
 
 # cursor.execute("DROP TABLE data;")
 
@@ -140,7 +140,7 @@ def process_message(msg):
         x += 1
 
 
-client = SlackClient("xoxb-289218111841-tuzMZgYL598QAUFy3TSX6TfI")
+client = SlackClient("CLIENT_CODE")
 client.rtm_connect()
 my_user_name = client.server.username
 print("Connected to slack")
