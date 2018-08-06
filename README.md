@@ -1,2 +1,2 @@
 # NovaBot
-Bot for slack
+Chat bot for slack 
